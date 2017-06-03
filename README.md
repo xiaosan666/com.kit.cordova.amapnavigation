@@ -1,4 +1,4 @@
-# cordova_plugin_amap_navigation
+# com.kit.cordova.amapnavigation
 
 使用高德地图sdk进行导航
 ## 配置
