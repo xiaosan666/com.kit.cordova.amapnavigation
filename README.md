@@ -6,12 +6,12 @@
 ### Android
 
 *  修改 plugin.xml(:23) 文件中的高德地图android key
-    `<preference name="amapapikey" value="这里填您申请的高德地图ios key"/>`
+        <preference name="amapapikey" value="这里填您申请的高德地图ios key"/>
 
 ### IOS
 
 *  修改 plugin.xml(:65) 文件中的高德地图ios key
-    `<meta-data android:name="com.amap.api.v2.apikey" android:value="这里填您申请的高德地图android key"/>`
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="这里填您申请的高德地图android key"/>
 
 ### ionic1调用方法
 
