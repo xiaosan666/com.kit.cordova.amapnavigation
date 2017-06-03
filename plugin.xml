@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.kit.cordova.amapnavigation" version="2.0.0"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>AMapNavigation</name>
+  <description>Cordova Navigation Plugin Powerd by KIT</description>
+  <author email="yanxiaojun617@163.com" href="https://gzkit.com.cn">
+    yanxiaojun
+  </author>
+  <license>Apache 2.0</license>
+  <keywords>cordova,Navigation</keywords>
+
+  <js-module name="AMapNavigation" src="www/AMapNavigation.js">
+    <clobbers target="AMapNavigation"/>
+  </js-module>
+
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="AMapNavigation">
+        <param name="ios-package" value="AMapNavigation"/>
+      </feature>
+      <!--您申请的高德地图ios key更多详情请看http://www.jianshu.com/p/85aceaee3b35-->
+      <preference name="amapapikey" value="67e85e29dacc6c12ce60e4bb9de6e055"/>
+      <preference name="iflytekappid" value="5804981b" />
+    </config-file>
+    <source-file src="src/ios/AMapNavigation.m"/>
+
+    <resource-file src="src/ios/AMap.bundle"/>
+    <resource-file src="src/ios/AMapNavi.bundle"/>
+
+    <framework src="src/ios/AMapNaviKit.framework" custom="true"/>
+    <framework src="AudioToolbox.framework"/>
+    <framework src="AVFoundation.framework"/>
+    <framework src="AddressBook.framework"/>
+    <framework src="libz.dylib"/>
+    <framework src="libstdc++.6.0.9.dylib"/>
+  </platform>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="AMapNavigation">
+        <param name="android-package" value="com.kit.cordova.amapnavigation.AMapNavigation"/>
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml">
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+      <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+      <uses-permission android:name="android.permission.READ_CONTACTS"/>
+      <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+      <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+      <uses-permission android:name="android.permission.WAKE_LOCK"/>
+      <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+      <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+      <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    </config-file>
+    <!--  该处使用的key配置和定位的重复了，所以仅保留一处
+          <config-file target="AndroidManifest.xml" parent="/manifest/application">
+                <meta-data
+                android:name="com.amap.api.v2.apikey"
+                android:value="018577734cd1a4af952cf434b03d320e" />
+            </config-file>-->
+
+    <config-file parent="/manifest/application" target="AndroidManifest.xml">
+      <activity android:name="com.kit.cordova.navigationService.NavigationActivity"/>
+    </config-file>
+    <source-file src="src/android/AMapNavigation.java" target-dir="src/com/kit/cordova/amapnavigation"/>
+    <source-file src="src/android/NavigationActivity.java" target-dir="src/com/kit/cordova/navigationService"/>
+
+    <source-file src="src/android/libs/armeabi/libgdamapv4sdk751.so" target-dir="libs/armeabi"/>
+    <source-file src="src/android/libs/armeabi/libgdamapv4sdk751ex.so" target-dir="libs/armeabi"/>
+    <source-file src="src/android/libs/armeabi/libmsc.so" target-dir="libs/armeabi"/>
+    <source-file src="src/android/libs/armeabi/libtbt.so" target-dir="libs/armeabi"/>
+    <source-file src="src/android/libs/armeabi/libwtbt.so" target-dir="libs/armeabi"/>
+
+
+    <source-file src="src/android/libs/armeabi/AMap_Android_3DMapSDK_V3.1.0.jar" target-dir="libs"/>
+    <source-file src="src/android/libs/armeabi/AMap_ Navi_v1.5.0_20151119.jar" target-dir="libs"/>
+    <source-file src="src/android/libs/armeabi/Msc.jar" target-dir="libs"/>
+  </platform>
+</plugin>
