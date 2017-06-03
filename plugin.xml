@@ -20,7 +20,7 @@
         <param name="ios-package" value="AMapNavigation"/>
       </feature>
       <!--您申请的高德地图ios key更多详情请看http://www.jianshu.com/p/85aceaee3b35-->
-      <preference name="amapapikey" value="67e85e29dacc6c12ce60e4bb9de6e055"/>
+      <preference name="amapapikey" value="这里填您申请的高德地图ios key"/>
       <preference name="iflytekappid" value="5804981b" />
     </config-file>
     <source-file src="src/ios/AMapNavigation.m"/>
@@ -59,12 +59,11 @@
       <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
       <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
     </config-file>
-    <!--  该处使用的key配置和定位的重复了，所以仅保留一处
-          <config-file target="AndroidManifest.xml" parent="/manifest/application">
-                <meta-data
-                android:name="com.amap.api.v2.apikey"
-                android:value="018577734cd1a4af952cf434b03d320e" />
-            </config-file>-->
+    <!--  如果使用了定位插件https://github.com/yanxiaojun617/com.kit.cordova.amaplocation.并在定位插件中配置了android key.
+       该处则不需要再进行配置android key-->
+    <!-- <config-file target="AndroidManifest.xml" parent="/manifest/application">
+       <meta-data android:name="com.amap.api.v2.apikey" android:value="这里填您申请的高德地图android key"/>
+     </config-file>-->
 
     <config-file parent="/manifest/application" target="AndroidManifest.xml">
       <activity android:name="com.kit.cordova.navigationService.NavigationActivity"/>
