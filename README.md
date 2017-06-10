@@ -13,6 +13,8 @@
 
 `<preference name="amapapikey" value="这里填您申请的高德地图ios key"/>`
 
+ps:_如果也使用了[定位插件](https://github.com/yanxiaojun617/com.kit.cordova.amaplocation),则不需要配置android key,因为在定位插件中已经配置了android key_
+
 ### IOS
 
 *  修改 plugin.xml(:65) 文件中的高德地图ios key
