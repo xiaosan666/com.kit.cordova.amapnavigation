@@ -1,0 +1,29 @@
+{
+  "name": "com.kit.cordova.amapnavigation",
+  "version": "1.0.0",
+  "description": "Cordova Navigation Plugin Powerd by KIT",
+  "cordova": {
+    "id": "com.kit.cordova.amapnavigation",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanxiaojun617/com.kit.cordova.amapnavigation.git"
+  },
+  "keywords": [
+    "cordova",
+    "Navigation",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "author": "yanxiaojun617@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yanxiaojun617/com.kit.cordova.amapnavigation/issues"
+  },
+  "homepage": "https://github.com/yanxiaojun617/com.kit.cordova.amapnavigation#readme"
+}
