@@ -3,7 +3,7 @@
 使用高德地图sdk进行导航
 
 ## 安装
-`cordova plugin add https://github.com/yanxiaojun617/com.kit.cordova.amapnavigation --save `
+`cordova plugin add https://github.com/yanxiaojun617/com.kit.cordova.amapnavigation.git --save `
 
 ## 配置
 更多详情请看http://www.jianshu.com/p/85aceaee3b35
